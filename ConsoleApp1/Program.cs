@@ -29,8 +29,8 @@
             System.Console.Write("Enter your name: ");
             string name = Console.ReadLine();
             System.Console.Write("Enter your age: ");
-            string ageInput = Console.ReadLine();
-            int age = Convert.ToInt32(ageInput);
+            // string ageInput = Console.ReadLine();
+            int age = Convert.ToInt32(Console.ReadLine());
             System.Console.WriteLine($"Okay, so your name is {name} and you are {age} years old? That is so cool {name}!");
         }
     }
