@@ -42,6 +42,31 @@
             // {
             //     System.Console.WriteLine("You're still a baby!");
             // }
+
+            //* Calculations test exercise *//
+
+            Console.Write("Enter the first number: ");
+            string numberAInput = Console.ReadLine();
+            int numberA = Convert.ToInt32(numberAInput);
+
+            Console.Write("Enter the second number: ");
+            string numberBInput = Console.ReadLine();
+            int numberB = Convert.ToInt32(numberBInput);
+
+            int answer = numberA * numberB;
+
+            Console.Write("Value of " + numberA + " x " + numberB + ": ");
+            string answerInput = Console.ReadLine();
+            int actualAnswer = Convert.ToInt32(answerInput);
+
+            if (answer == actualAnswer)
+            {
+                System.Console.WriteLine("Nice job, you're correct!");
+            }
+            else
+            {
+                System.Console.WriteLine("How did you get that wrong?...");
+            }
         }
     }
 }
