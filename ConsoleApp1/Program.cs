@@ -11,16 +11,26 @@
             // int age = Convert.ToInt32(textAge);
             // System.Console.WriteLine($"{name} is {age} years old");
 
-            int first = 21;
-            int second = 12;
+            //* odd/even exercise *//
 
-            int remainder = first % second;
+            // int first = 21;
+            // int second = 12;
 
-            first = 923;
+            // int remainder = first % second;
 
-            int newRemainder = first % second;
+            // first = 923;
 
-            System.Console.WriteLine($"New Remainder = {newRemainder}");
+            // int newRemainder = first % second;
+
+            // System.Console.WriteLine($"New Remainder = {newRemainder}");
+
+            //* user input exercise *//
+
+            System.Console.Write("Enter your name: ");
+            string name = Console.ReadLine();
+            System.Console.Write("Enter your age: ");
+            string age = Console.ReadLine();
+            System.Console.WriteLine($"Okay, so your name is {name} and you are {age} years old? That is so cool {name}!");
         }
     }
 }
