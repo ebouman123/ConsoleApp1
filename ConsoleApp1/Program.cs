@@ -104,20 +104,26 @@
 
             //* For Loops *//
 
-            Console.Write("How many times do you want to meow?");
-            int loopCounter = Convert.ToInt32(Console.ReadLine());
+            // Console.Write("How many times do you want to meow?");
+            // int loopCounter = Convert.ToInt32(Console.ReadLine());
 
-            if (loopCounter <= 0)
-            {
-                Console.WriteLine("Why don't you want to meow?");
-            }
-            else
-            {
-                for (int i = 0; i < loopCounter; i++)
-                {
-                    Console.WriteLine("MEOW");
-                }
-            }
+            // if (loopCounter <= 0)
+            // {
+            //     Console.WriteLine("Why don't you want to meow?");
+            // }
+            // else
+            // {
+            //     for (int i = 0; i < loopCounter; i++)
+            //     {
+            //         Console.WriteLine("MEOW");
+            //     }
+            // }
+
+            //* Conditional operator *//
+
+            int age = -10;
+
+            Console.WriteLine(age >= 0 ? "Valid" : "Invalid");
         }
     }
 }
