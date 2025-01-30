@@ -45,27 +45,60 @@
 
             //* Calculations test exercise *//
 
-            Console.Write("Enter the first number: ");
-            string numberAInput = Console.ReadLine();
-            int numberA = Convert.ToInt32(numberAInput);
+            // Console.Write("Enter the first number: ");
+            // string numberAInput = Console.ReadLine();
+            // int numberA = Convert.ToInt32(numberAInput);
 
-            Console.Write("Enter the second number: ");
-            string numberBInput = Console.ReadLine();
-            int numberB = Convert.ToInt32(numberBInput);
+            // Console.Write("Enter the second number: ");
+            // string numberBInput = Console.ReadLine();
+            // int numberB = Convert.ToInt32(numberBInput);
 
-            int answer = numberA * numberB;
+            // int answer = numberA * numberB;
 
-            Console.Write("Value of " + numberA + " x " + numberB + ": ");
-            string answerInput = Console.ReadLine();
-            int actualAnswer = Convert.ToInt32(answerInput);
+            // Console.Write("Value of " + numberA + " x " + numberB + ": ");
+            // string answerInput = Console.ReadLine();
+            // int actualAnswer = Convert.ToInt32(answerInput);
 
-            if (answer == actualAnswer)
+            // if (answer == actualAnswer)
+            // {
+            //     System.Console.WriteLine("Nice job, you're correct!");
+            // }
+            // else
+            // {
+            //     System.Console.WriteLine("How did you get that wrong?...");
+            // }
+
+            //* Switch Statements *//
+
+            Console.Write("Enter a day of the week: ");
+            int day = Convert.ToInt32(Console.ReadLine());
+
+            switch (day)
             {
-                System.Console.WriteLine("Nice job, you're correct!");
-            }
-            else
-            {
-                System.Console.WriteLine("How did you get that wrong?...");
+                case 1:
+                    Console.WriteLine("Monday");
+                    break;
+                case 2:
+                    Console.WriteLine("Tuesday");
+                    break;
+                case 3:
+                    Console.WriteLine("Wednesday");
+                    break;
+                case 4:
+                    Console.WriteLine("Thursday");
+                    break;
+                case 5:
+                    Console.WriteLine("Friday");
+                    break;
+                case 6:
+                    Console.WriteLine("Saturday");
+                    break;
+                case 7:
+                    Console.WriteLine("Sunday");
+                    break;
+                default:
+                    Console.WriteLine("Please enter a number between 1 and 7");
+                    break;
             }
         }
     }
