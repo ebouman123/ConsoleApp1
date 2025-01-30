@@ -70,35 +70,53 @@
 
             //* Switch Statements *//
 
-            Console.Write("Enter a day of the week: ");
-            int day = Convert.ToInt32(Console.ReadLine());
+            // Console.Write("Enter a day of the week: ");
+            // int day = Convert.ToInt32(Console.ReadLine());
 
-            switch (day)
+            // switch (day)
+            // {
+            //     case 1:
+            //         Console.WriteLine("Monday");
+            //         break;
+            //     case 2:
+            //         Console.WriteLine("Tuesday");
+            //         break;
+            //     case 3:
+            //         Console.WriteLine("Wednesday");
+            //         break;
+            //     case 4:
+            //         Console.WriteLine("Thursday");
+            //         break;
+            //     case 5:
+            //         Console.WriteLine("Friday");
+            //         break;
+            //     case 6:
+            //         Console.WriteLine("Saturday");
+            //         break;
+            //     case 7:
+            //         Console.WriteLine("Sunday");
+            //         break;
+            //     default:
+            //         Console.WriteLine("Please enter a number between 1 and 7");
+            //         break;
+            // }
+
+
+            //* For Loops *//
+
+            Console.Write("How many times do you want to meow?");
+            int loopCounter = Convert.ToInt32(Console.ReadLine());
+
+            if (loopCounter <= 0)
             {
-                case 1:
-                    Console.WriteLine("Monday");
-                    break;
-                case 2:
-                    Console.WriteLine("Tuesday");
-                    break;
-                case 3:
-                    Console.WriteLine("Wednesday");
-                    break;
-                case 4:
-                    Console.WriteLine("Thursday");
-                    break;
-                case 5:
-                    Console.WriteLine("Friday");
-                    break;
-                case 6:
-                    Console.WriteLine("Saturday");
-                    break;
-                case 7:
-                    Console.WriteLine("Sunday");
-                    break;
-                default:
-                    Console.WriteLine("Please enter a number between 1 and 7");
-                    break;
+                Console.WriteLine("Why don't you want to meow?");
+            }
+            else
+            {
+                for (int i = 0; i < loopCounter; i++)
+                {
+                    Console.WriteLine("MEOW");
+                }
             }
         }
     }
