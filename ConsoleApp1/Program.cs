@@ -164,11 +164,38 @@
             // ask the user for a number for the table
             // Write a for loop to print X times table
 
-            Console.Write("Enter a number: ");
-            int number = Convert.ToInt32(Console.ReadLine());
+            // Console.Write("Enter a number: ");
+            // int number = Convert.ToInt32(Console.ReadLine());
 
-            for (int i = 1; i <= 10; i++){
-                Console.WriteLine("{0} x {1} = {2}", i, number, i * number);
+            // for (int i = 1; i <= 10; i++){
+            //     Console.WriteLine("{0} x {1} = {2}", i, number, i * number);
+            // }
+
+            //* FizzBuzz *//
+            // Create a for loop from 1 to X (15)
+            // 3 and 5 = FizzBuzz
+            // 3 = Fizz
+            // 5 = Buzz
+            // else = number
+
+            for (int i = 1; i <= 15; i++)
+            {
+                if (i % 3 == 0 && i % 5 == 0)
+                {
+                    Console.WriteLine("FizzBuzz");
+                }
+                else if (i % 5 == 0)
+                {
+                    Console.WriteLine("Buzz");
+                }
+                else if (i % 3 == 0)
+                {
+                    Console.WriteLine("Fizz");
+                }
+                else
+                {
+                    Console.WriteLine(i);
+                }
             }
 
         }
