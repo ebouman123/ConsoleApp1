@@ -127,18 +127,38 @@
 
             //* Numeric formatting *//
 
-            double value = 1000D / 12.34D; // must specify double, otherwise it will be calculated as an int
+            // double value = 1000D / 12.34D; // must specify double, otherwise it will be calculated as an int
 
-            Console.WriteLine(value);
-            Console.WriteLine(string.Format("{0:0}", value));
-            Console.WriteLine(string.Format("{0:0.0}", value));
-            Console.WriteLine(string.Format("{0:0.#}", value)); // # will take off any trailing zeroes
-            Console.WriteLine(string.Format("{0:0.00}", value));
+            // Console.WriteLine(value);
+            // Console.WriteLine(string.Format("{0:0}", value));
+            // Console.WriteLine(string.Format("{0:0.0}", value));
+            // Console.WriteLine(string.Format("{0:0.#}", value)); // # will take off any trailing zeroes
+            // Console.WriteLine(string.Format("{0:0.00}", value));
 
-            double money = 10D / 3D;
+            // double money = 10D / 3D;
 
-            Console.WriteLine(money);
-            Console.WriteLine(string.Format("$10 / $3 = ${0:0.00}", money));
+            // Console.WriteLine(money);
+            // Console.WriteLine(string.Format("$10 / $3 = ${0:0.00}", money));
+
+            //* TryParse Function *//
+
+            Console.Write("Enter a number: ");
+            string numInput = Console.ReadLine();
+            // int num = Convert.ToInt32(numInput); // invalid input will cause the program to crash
+            int num = 0;
+
+            bool success = int.TryParse(numInput, out num); // will attempt to parse the numInput and will output the number if successful
+
+            if (success)
+            {
+                Console.WriteLine(num);
+            }
+            else
+            {
+                Console.WriteLine("Failed to convert");
+            }
+
+            Console.ReadLine();
         }
     }
 }
