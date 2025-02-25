@@ -142,23 +142,35 @@
 
             //* TryParse Function *//
 
+            // Console.Write("Enter a number: ");
+            // string numInput = Console.ReadLine();
+            // // int num = Convert.ToInt32(numInput); // invalid input will cause the program to crash
+            // int num = 0;
+
+            // bool success = int.TryParse(numInput, out num); // will attempt to parse the numInput and will output the number if successful
+
+            // if (success)
+            // {
+            //     Console.WriteLine(num);
+            // }
+            // else
+            // {
+            //     Console.WriteLine("Failed to convert");
+            // }
+
+            // Console.ReadLine();
+
+            //* Times Table Exercise *//
+            // ask the user for a number for the table
+            // Write a for loop to print X times table
+
             Console.Write("Enter a number: ");
-            string numInput = Console.ReadLine();
-            // int num = Convert.ToInt32(numInput); // invalid input will cause the program to crash
-            int num = 0;
+            int number = Convert.ToInt32(Console.ReadLine());
 
-            bool success = int.TryParse(numInput, out num); // will attempt to parse the numInput and will output the number if successful
-
-            if (success)
-            {
-                Console.WriteLine(num);
-            }
-            else
-            {
-                Console.WriteLine("Failed to convert");
+            for (int i = 1; i <= 10; i++){
+                Console.WriteLine("{0} x {1} = {2}", i, number, i * number);
             }
 
-            Console.ReadLine();
         }
     }
 }
