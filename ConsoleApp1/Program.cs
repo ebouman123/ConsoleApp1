@@ -121,9 +121,24 @@
 
             //* Conditional operator *//
 
-            int age = -10;
+            // int age = -10;
 
-            Console.WriteLine(age >= 0 ? "Valid" : "Invalid");
+            // Console.WriteLine(age >= 0 ? "Valid" : "Invalid");
+
+            //* Numeric formatting *//
+
+            double value = 1000D / 12.34D; // must specify double, otherwise it will be calculated as an int
+
+            Console.WriteLine(value);
+            Console.WriteLine(string.Format("{0:0}", value));
+            Console.WriteLine(string.Format("{0:0.0}", value));
+            Console.WriteLine(string.Format("{0:0.#}", value)); // # will take off any trailing zeroes
+            Console.WriteLine(string.Format("{0:0.00}", value));
+
+            double money = 10D / 3D;
+
+            Console.WriteLine(money);
+            Console.WriteLine(string.Format("$10 / $3 = ${0:0.00}", money));
         }
     }
 }
