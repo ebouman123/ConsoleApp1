@@ -178,25 +178,41 @@
             // 5 = Buzz
             // else = number
 
-            for (int i = 1; i <= 15; i++)
-            {
-                if (i % 3 == 0 && i % 5 == 0)
-                {
-                    Console.WriteLine("FizzBuzz");
-                }
-                else if (i % 5 == 0)
-                {
-                    Console.WriteLine("Buzz");
-                }
-                else if (i % 3 == 0)
-                {
-                    Console.WriteLine("Fizz");
-                }
-                else
-                {
-                    Console.WriteLine(i);
-                }
-            }
+            // for (int i = 1; i <= 15; i++)
+            // {
+            //     if (i % 3 == 0 && i % 5 == 0)
+            //     {
+            //         Console.WriteLine("FizzBuzz");
+            //     }
+            //     else if (i % 5 == 0)
+            //     {
+            //         Console.WriteLine("Buzz");
+            //     }
+            //     else if (i % 3 == 0)
+            //     {
+            //         Console.WriteLine("Fizz");
+            //     }
+            //     else
+            //     {
+            //         Console.WriteLine(i);
+            //     }
+            // }
+
+            //* String Literal *//
+            // \ acts as an escape character
+            // \t (tab), \n (new line)
+            // @ is a verbatim identifier
+            // can't combine verbatim with \t, \n, etc. - would need to concatenate with +
+
+            string path = "C:\\Users\\ebouman\\Desktop\\C# Course";
+            string path2 = @"C:\Users\ebouman\Desktop\C# Course";
+            string speech = "He said \"something\"";
+            string speech2 = @"He said ""something"""; // use double quotes with @
+            Console.WriteLine(path);
+            Console.WriteLine(path2);
+            Console.WriteLine(speech);
+            Console.WriteLine(speech2);
+            Console.ReadLine();
 
         }
     }
