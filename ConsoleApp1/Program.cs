@@ -218,11 +218,19 @@
             //* String formatting *//
             // {} can be used to assign variables, going up from 0
 
+            // string name = "Gordon";
+            // int age = 8;
+
+            // Console.WriteLine("Your name is {0}, and your age is {1}", name, age);
+            // Console.WriteLine("Name: {0}\nAge: {1}", name, age);
+
+            //* String Interpolation *//
+            // Same as JavaScript
+
             string name = "Gordon";
             int age = 8;
 
-            Console.WriteLine("Your name is {0}, and your age is {1}", name, age);
-            Console.WriteLine("Name: {0}\nAge: {1}", name, age);
+            Console.WriteLine($"Hi, my name is {name} and I'm {age} years old");
 
         }
     }
