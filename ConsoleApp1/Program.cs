@@ -204,15 +204,25 @@
             // @ is a verbatim identifier
             // can't combine verbatim with \t, \n, etc. - would need to concatenate with +
 
-            string path = "C:\\Users\\ebouman\\Desktop\\C# Course";
-            string path2 = @"C:\Users\ebouman\Desktop\C# Course";
-            string speech = "He said \"something\"";
-            string speech2 = @"He said ""something"""; // use double quotes with @
-            Console.WriteLine(path);
-            Console.WriteLine(path2);
-            Console.WriteLine(speech);
-            Console.WriteLine(speech2);
-            Console.ReadLine();
+            // string path = "C:\\Users\\ebouman\\Desktop\\C# Course";
+            // string path2 = @"C:\Users\ebouman\Desktop\C# Course";
+            // string speech = "He said \"something\"";
+            // string speech2 = @"He said ""something"""; // use double quotes with @
+            // Console.WriteLine(path);
+            // Console.WriteLine(path2);
+            // Console.WriteLine(speech);
+            // Console.WriteLine(speech2);
+            // Console.ReadLine();
+
+
+            //* String formatting *//
+            // {} can be used to assign variables, going up from 0
+
+            string name = "Gordon";
+            int age = 8;
+
+            Console.WriteLine("Your name is {0}, and your age is {1}", name, age);
+            Console.WriteLine("Name: {0}\nAge: {1}", name, age);
 
         }
     }
