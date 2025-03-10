@@ -247,7 +247,25 @@
             // string name = string.Empty;
             // Can use this instead of empty quotes, like in if statements
 
-            
+            //* String Equals Function *//
+
+            string message = "Hello";
+            string compare = "Hello";
+
+            // can use this with empty strings as well: if name.Equals("")
+            // better to use this then == with arrays
+
+            if (message == compare) // use message.Equals(compare) instead
+            {
+                Console.WriteLine("Same");
+            }
+            else
+            {
+                Console.WriteLine("Different");
+            }
+
+            Console.ReadLine();
+
         }
     }
 }
