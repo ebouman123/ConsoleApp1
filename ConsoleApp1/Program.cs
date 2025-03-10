@@ -227,10 +227,20 @@
             //* String Interpolation *//
             // Same as JavaScript
 
+            // string name = "Gordon";
+            // int age = 8;
+
+            // Console.WriteLine($"Hi, my name is {name} and I'm {age} years old");
+
+            //* String Concatenation *//
+            // Same as JS, use +
             string name = "Gordon";
             int age = 8;
 
-            Console.WriteLine($"Hi, my name is {name} and I'm {age} years old");
+            string test = string.Concat("Your name is ", name, " and your age is ", age);
+
+            string[] names = new string[] {"Gordon", "Sammi", "Daisy"};
+            Console.WriteLine(string.Concat(names));
 
         }
     }
