@@ -234,14 +234,20 @@
 
             //* String Concatenation *//
             // Same as JS, use +
-            string name = "Gordon";
-            int age = 8;
+            // string name = "Gordon";
+            // int age = 8;
 
-            string test = string.Concat("Your name is ", name, " and your age is ", age);
+            // string test = string.Concat("Your name is ", name, " and your age is ", age);
 
-            string[] names = new string[] {"Gordon", "Sammi", "Daisy"};
-            Console.WriteLine(string.Concat(names));
+            // string[] names = new string[] {"Gordon", "Sammi", "Daisy"};
+            // Console.WriteLine(string.Concat(names));
 
+            //* Empty String *//
+
+            // string name = string.Empty;
+            // Can use this instead of empty quotes, like in if statements
+
+            
         }
     }
 }
