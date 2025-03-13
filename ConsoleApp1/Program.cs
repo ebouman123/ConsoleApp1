@@ -1,4 +1,6 @@
-﻿namespace ConsoleApp1
+﻿using System.Threading;
+
+namespace ConsoleApp1
 {
     public class Program
     {
@@ -249,22 +251,56 @@
 
             //* String Equals Function *//
 
-            string message = "Hello";
-            string compare = "Hello";
+            // string message = "Hello";
+            // string compare = "Hello";
 
             // can use this with empty strings as well: if name.Equals("")
             // better to use this then == with arrays
 
-            if (message == compare) // use message.Equals(compare) instead
+            // if (message == compare) // use message.Equals(compare) instead
+            // {
+            //     Console.WriteLine("Same");
+            // }
+            // else
+            // {
+            //     Console.WriteLine("Different");
+            // }
+
+            // Console.ReadLine();
+
+            //* String Iteration(looping) *//
+
+            string message = "Gordon is awesome"; // remember strings are basically arrays
+
+            // Console.WriteLine(message[0]);
+            // Console.WriteLine(message[1]);
+            // Console.WriteLine(message[2]);
+            // Console.WriteLine(message[3]);
+            // Console.WriteLine(message[4]);
+
+            for (int i = 0; i < message.Length; i++)
             {
-                Console.WriteLine("Same");
-            }
-            else
-            {
-                Console.WriteLine("Different");
+                Console.Write(message[i]);
+                Thread.Sleep(100); // 1000ms = 1 sec
             }
 
+            Console.WriteLine();
+            Console.WriteLine(message.Contains("G"));
+
+            bool contains = false;
+
+            for (int i = 0; i < message.Length; i++)
+            {
+                if (message[i].Equals('G'))
+                {
+                    contains = true;
+                }
+            }
+
+            Console.WriteLine(contains);
+
             Console.ReadLine();
+
 
         }
     }
