@@ -270,37 +270,56 @@ namespace ConsoleApp1
 
             //* String Iteration(looping) *//
 
-            string message = "Gordon is awesome"; // remember strings are basically arrays
+            // string message = "Gordon is awesome"; // remember strings are basically arrays
 
-            // Console.WriteLine(message[0]);
-            // Console.WriteLine(message[1]);
-            // Console.WriteLine(message[2]);
-            // Console.WriteLine(message[3]);
-            // Console.WriteLine(message[4]);
+            // // Console.WriteLine(message[0]);
+            // // Console.WriteLine(message[1]);
+            // // Console.WriteLine(message[2]);
+            // // Console.WriteLine(message[3]);
+            // // Console.WriteLine(message[4]);
 
-            for (int i = 0; i < message.Length; i++)
-            {
-                Console.Write(message[i]);
-                Thread.Sleep(100); // 1000ms = 1 sec
-            }
+            // for (int i = 0; i < message.Length; i++)
+            // {
+            //     Console.Write(message[i]);
+            //     Thread.Sleep(100); // 1000ms = 1 sec
+            // }
 
-            Console.WriteLine();
-            Console.WriteLine(message.Contains("G"));
+            // Console.WriteLine();
+            // Console.WriteLine(message.Contains("G"));
 
-            bool contains = false;
+            // bool contains = false;
 
-            for (int i = 0; i < message.Length; i++)
-            {
-                if (message[i].Equals('G'))
-                {
-                    contains = true;
-                }
-            }
+            // for (int i = 0; i < message.Length; i++)
+            // {
+            //     if (message[i].Equals('G'))
+            //     {
+            //         contains = true;
+            //     }
+            // }
 
-            Console.WriteLine(contains);
+            // Console.WriteLine(contains);
 
-            Console.ReadLine();
+            // Console.ReadLine();
 
+            //* String IsNullOrEmpty Function *//
+
+            // does what is says, empty string is still a string
+            // also can't run functions on null values
+            // returns true if it isn't null or empty
+
+            Console.Write("Enter your name: ");
+            string name = Console.ReadLine();
+
+            Console.WriteLine($"Your name is {name}");
+
+            // if (name != "")
+            //     Console.WriteLine("0");
+
+            // if (!name.Equals(""))
+            //     Console.WriteLine("1");
+
+            if (!string.IsNullOrEmpty(name))
+                Console.WriteLine("2");
 
         }
     }
