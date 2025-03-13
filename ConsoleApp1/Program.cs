@@ -325,22 +325,51 @@ namespace ConsoleApp1
             //* Exercise: Print string in reverse *//
             // Print in order and reverse
 
-            Console.Write("Enter Your Message: ");
-            string message = Console.ReadLine();
+            // Console.Write("Enter Your Message: ");
+            // string message = Console.ReadLine();
 
-            for (int i = 0; i < message.Length; i++)
+            // for (int i = 0; i < message.Length; i++)
+            //     {
+            //         Console.Write(message[i]);
+            //     }
+
+            // Console.WriteLine();
+
+            // for (int i = message.Length; i > 0; i--)
+            //     {
+            //         Console.Write(message[i - 1]);
+            //     }
+
+            // Console.ReadLine();
+
+            //* Exercise: Password Checker *//
+
+            // Ask user to enter password and store
+            // Ask user to enter password again and store
+            // Check if they both contain something
+            // If same, print passwords match, if not, print passwords do not match
+            // If empty print please enter a password
+
+            Console.Write("Choose a password: ");
+            string password = Console.ReadLine();
+
+            Console.Write("Re-enter your password: ");
+            string passwordConfirmation = Console.ReadLine();
+
+            if (password == passwordConfirmation && !string.IsNullOrEmpty(password))
                 {
-                    Console.Write(message[i]);
+                    Console.WriteLine("Passwords match");
+                }
+            else if (password != passwordConfirmation)
+                {
+                    Console.WriteLine("Passwords do not match");
+                }
+            else 
+                {
+                    Console.WriteLine("Please choose a password");
                 }
 
-            Console.WriteLine();
 
-            for (int i = message.Length; i > 0; i--)
-                {
-                    Console.Write(message[i - 1]);
-                }
-
-            Console.ReadLine();
         }
     }
 }
