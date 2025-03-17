@@ -371,28 +371,44 @@ namespace ConsoleApp1
 
             //* Arrays *//
 
-            int[] numbers = new int[3];
-            numbers[0] = 5;
-            numbers[1] = 10;
-            numbers[2] = 15;
+            // int[] numbers = new int[3];
+            // numbers[0] = 5;
+            // numbers[1] = 10;
+            // numbers[2] = 15;
 
-            const int angleCount = 3;
-            int[] angles = new int[angleCount];
+            // const int angleCount = 3;
+            // int[] angles = new int[angleCount];
 
-            for (int i = 0; i < angles.Length; i++)
+            // for (int i = 0; i < angles.Length; i++)
+            //     {
+            //         Console.Write($"Enter angle {i + 1}: ");
+            //         angles[i] = Convert.ToInt32(Console.ReadLine());
+            //     }
+
+            // int angleSum = 0;
+
+            // foreach (int angle in angles)
+            //     {
+            //         angleSum += angle;
+            //     }
+
+            // Console.WriteLine(angleSum == 180 ? "Valid" : "Invalid");
+
+            //* Array Sorting *//
+            // string functions tend to return the new string, array functions tend to return void
+
+            int[] numbers = new int[] // another way to initialize array values
                 {
-                    Console.Write($"Enter angle {i + 1}: ");
-                    angles[i] = Convert.ToInt32(Console.ReadLine());
+                    2, 1, 9, 4, 3, 6, 2
+                };
+
+            Array.Sort(numbers);
+
+            foreach (int number in numbers)
+                {
+                    Console.Write($"{number} ");
                 }
 
-            int angleSum = 0;
-
-            foreach (int angle in angles)
-                {
-                    angleSum += angle;
-                }
-
-            Console.WriteLine(angleSum == 180 ? "Valid" : "Invalid");
         }
     }
 }
