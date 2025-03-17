@@ -397,18 +397,31 @@ namespace ConsoleApp1
             //* Array Sorting *//
             // string functions tend to return the new string, array functions tend to return void
 
-            int[] numbers = new int[] // another way to initialize array values
+            // int[] numbers = new int[] // another way to initialize array values
+            //     {
+            //         2, 1, 9, 4, 3, 6, 2
+            //     };
+
+            // Array.Sort(numbers);
+
+            // foreach (int number in numbers)
+            //     {
+            //         Console.Write($"{number} ");
+            //     }
+
+            //* Array Reversal *//
+
+            int[] numbers = new int[]
                 {
-                    2, 1, 9, 4, 3, 6, 2
+                    1, 2, 3, 4, 5
                 };
 
-            Array.Sort(numbers);
+            Array.Reverse(numbers);
 
-            foreach (int number in numbers)
+            foreach (var item in numbers)
                 {
-                    Console.Write($"{number} ");
+                    Console.Write($"{item} ");
                 }
-
         }
     }
 }
