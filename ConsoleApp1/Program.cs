@@ -350,26 +350,49 @@ namespace ConsoleApp1
             // If same, print passwords match, if not, print passwords do not match
             // If empty print please enter a password
 
-            Console.Write("Choose a password: ");
-            string password = Console.ReadLine();
+            // Console.Write("Choose a password: ");
+            // string password = Console.ReadLine();
 
-            Console.Write("Re-enter your password: ");
-            string passwordConfirmation = Console.ReadLine();
+            // Console.Write("Re-enter your password: ");
+            // string passwordConfirmation = Console.ReadLine();
 
-            if (password == passwordConfirmation && !string.IsNullOrEmpty(password))
+            // if (password == passwordConfirmation && !string.IsNullOrEmpty(password))
+            //     {
+            //         Console.WriteLine("Passwords match");
+            //     }
+            // else if (password != passwordConfirmation)
+            //     {
+            //         Console.WriteLine("Passwords do not match");
+            //     }
+            // else 
+            //     {
+            //         Console.WriteLine("Please choose a password");
+            //     }
+
+            //* Arrays *//
+
+            int[] numbers = new int[3];
+            numbers[0] = 5;
+            numbers[1] = 10;
+            numbers[2] = 15;
+
+            const int angleCount = 3;
+            int[] angles = new int[angleCount];
+
+            for (int i = 0; i < angles.Length; i++)
                 {
-                    Console.WriteLine("Passwords match");
-                }
-            else if (password != passwordConfirmation)
-                {
-                    Console.WriteLine("Passwords do not match");
-                }
-            else 
-                {
-                    Console.WriteLine("Please choose a password");
+                    Console.Write($"Enter angle {i + 1}: ");
+                    angles[i] = Convert.ToInt32(Console.ReadLine());
                 }
 
+            int angleSum = 0;
 
+            foreach (int angle in angles)
+                {
+                    angleSum += angle;
+                }
+
+            Console.WriteLine(angleSum == 180 ? "Valid" : "Invalid");
         }
     }
 }
