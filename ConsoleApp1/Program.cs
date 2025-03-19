@@ -411,17 +411,30 @@ namespace ConsoleApp1
 
             //* Array Reversal *//
 
+            // int[] numbers = new int[]
+            //     {
+            //         1, 2, 3, 4, 5
+            //     };
+
+            // Array.Reverse(numbers); // better than having the database do this
+
+            // foreach (var item in numbers)
+            //     {
+            //         Console.Write($"{item} ");
+            //     }
+
+            //* Array Clearing *//
+
             int[] numbers = new int[]
                 {
                     1, 2, 3, 4, 5
                 };
 
-            Array.Reverse(numbers);
+            Array.Clear(numbers, 0, numbers.Length); // this would replace all ints with 0 (default value for ints) - can use key word default
+            // (Array, starting index, ending index)
 
-            foreach (var item in numbers)
-                {
-                    Console.Write($"{item} ");
-                }
+            Console.ReadLine();
+
         }
     }
 }
