@@ -425,13 +425,38 @@ namespace ConsoleApp1
 
             //* Array Clearing *//
 
+            // int[] numbers = new int[]
+            //     {
+            //         1, 2, 3, 4, 5
+            //     };
+
+            // Array.Clear(numbers, 0, numbers.Length); // this would replace all ints with 0 (default value for ints) - can use key word default
+            // // (Array, starting index, ending index)
+
+            // Console.ReadLine();
+
+            //* Array IndexOf *//
+
             int[] numbers = new int[]
                 {
-                    1, 2, 3, 4, 5
+                    11, 423, 63, 91, 2
                 };
 
-            Array.Clear(numbers, 0, numbers.Length); // this would replace all ints with 0 (default value for ints) - can use key word default
-            // (Array, starting index, ending index)
+            Console.Write("Enter a number you'd like to search: ");
+            int search = Convert.ToInt32(Console.ReadLine());
+
+            int position = Array.IndexOf(numbers, search);
+            // returns the first match then stops (Array, search value, range(optional))
+            // if not found, returns -1
+
+            if (position > -1)
+                {
+                    Console.Write($"Number found at index {position}");
+                }
+            else
+                {
+                    Console.Write("Number not found");
+                }
 
             Console.ReadLine();
 
