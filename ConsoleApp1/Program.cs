@@ -437,28 +437,52 @@ namespace ConsoleApp1
 
             //* Array IndexOf *//
 
-            int[] numbers = new int[]
-                {
-                    11, 423, 63, 91, 2
-                };
+            // int[] numbers = new int[]
+            //     {
+            //         11, 423, 63, 91, 2
+            //     };
 
-            Console.Write("Enter a number you'd like to search: ");
-            int search = Convert.ToInt32(Console.ReadLine());
+            // Console.Write("Enter a number you'd like to search: ");
+            // int search = Convert.ToInt32(Console.ReadLine());
 
-            int position = Array.IndexOf(numbers, search);
-            // returns the first match then stops (Array, search value, range(optional))
-            // if not found, returns -1
+            // int position = Array.IndexOf(numbers, search);
+            // // returns the first match then stops (Array, search value, range(optional))
+            // // if not found, returns -1
 
-            if (position > -1)
-                {
-                    Console.Write($"Number found at index {position}");
-                }
-            else
-                {
-                    Console.Write("Number not found");
-                }
+            // if (position > -1)
+            //     {
+            //         Console.Write($"Number found at index {position}");
+            //     }
+            // else
+            //     {
+            //         Console.Write("Number not found");
+            //     }
 
-            Console.ReadLine();
+            // Console.ReadLine();
+
+            //* Lists *//
+
+            List<int> listNumbers = new List<int>();
+
+            for (int i = 0; i < 3; i++)
+            {
+                Console.Write("Enter a number: ");
+                int num = Convert.ToInt32(Console.ReadLine());
+                listNumbers.Add(num);
+            }
+
+            for (int i = 0; i < listNumbers.Count; i++) //.Count for lists to see length
+            {
+                System.Console.WriteLine(listNumbers[i]);
+            }
+
+            listNumbers.RemoveAt(0);
+
+            foreach (var item in listNumbers)
+            {
+                Console.WriteLine(item);
+            }
+
 
         }
     }
