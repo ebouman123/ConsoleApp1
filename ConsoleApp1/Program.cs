@@ -1,4 +1,6 @@
 ﻿using System.Threading;
+using System;
+using System.Collections.Generic;
 
 namespace ConsoleApp1
 {
@@ -462,25 +464,76 @@ namespace ConsoleApp1
 
             //* Lists *//
 
-            List<int> listNumbers = new List<int>();
+            // List<int> listNumbers = new List<int>();
 
-            for (int i = 0; i < 3; i++)
+            // for (int i = 0; i < 3; i++)
+            // {
+            //     Console.Write("Enter a number: ");
+            //     int num = Convert.ToInt32(Console.ReadLine());
+            //     listNumbers.Add(num);
+            // }
+
+            // for (int i = 0; i < listNumbers.Count; i++) //.Count for lists to see length
+            // {
+            //     System.Console.WriteLine(listNumbers[i]);
+            // }
+
+            // listNumbers.RemoveAt(0);
+
+            // foreach (var item in listNumbers)
+            // {
+            //     Console.WriteLine(item);
+            // }
+
+            //* Dictionary *//
+            // like objects in JS
+
+            // Dictionary<int, string> names = new Dictionary<int, string>
+            //     {
+            //         // key values like objects, keys must be unique <key, value>
+            //         {1, "Gordon"},
+            //         {2, "Sammi"}
+            //     };
+
+            // // names.Add(1, "Gordon");
+            // // names.Add(2, "Sammi");
+
+
+            // for (int i = 0; i < names.Count; i++)
+            // {
+            //     KeyValuePair<int, string> pair = names.ElementAt(i);
+            //     Console.WriteLine($"{pair.Key} - {pair.Value}");
+            // }
+
+            // foreach (KeyValuePair<int, string> item in names)
+            // {
+            //     Console.WriteLine($"{item.Key} - {item.Value}");
+            // }
+
+            Dictionary<string, string> teachers = new Dictionary<string, string>
             {
-                Console.Write("Enter a number: ");
-                int num = Convert.ToInt32(Console.ReadLine());
-                listNumbers.Add(num);
+                {"Math", "Gordon"},
+                {"English", "Sammi"}
+            };
+
+            // Console.WriteLine(teachers["Math"]);
+
+            if (teachers.TryGetValue("Math", out string teacher)) // avoids errors if key doesn't exist
+            {
+                Console.WriteLine(teachers);
+            }
+            else
+            {
+                Console.WriteLine("Math teacher not found");
             }
 
-            for (int i = 0; i < listNumbers.Count; i++) //.Count for lists to see length
+            if (teachers.ContainsKey("Math"))
             {
-                System.Console.WriteLine(listNumbers[i]);
+                teachers.Remove("Math");
             }
-
-            listNumbers.RemoveAt(0);
-
-            foreach (var item in listNumbers)
+            else
             {
-                Console.WriteLine(item);
+                Console.WriteLine("Math not found");
             }
 
 
