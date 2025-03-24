@@ -510,32 +510,74 @@ namespace ConsoleApp1
             //     Console.WriteLine($"{item.Key} - {item.Value}");
             // }
 
-            Dictionary<string, string> teachers = new Dictionary<string, string>
-            {
-                {"Math", "Gordon"},
-                {"English", "Sammi"}
-            };
+            // Dictionary<string, string> teachers = new Dictionary<string, string>
+            // {
+            //     {"Math", "Gordon"},
+            //     {"English", "Sammi"}
+            // };
 
-            // Console.WriteLine(teachers["Math"]);
+            // // Console.WriteLine(teachers["Math"]);
 
-            if (teachers.TryGetValue("Math", out string teacher)) // avoids errors if key doesn't exist
+            // if (teachers.TryGetValue("Math", out string teacher)) // avoids errors if key doesn't exist
+            // {
+            //     Console.WriteLine(teacher);
+            // }
+            // else
+            // {
+            //     Console.WriteLine("Math teacher not found");
+            // }
+
+            // if (teachers.ContainsKey("Math"))
+            // {
+            //     teachers.Remove("Math");
+            // }
+            // else
+            // {
+            //     Console.WriteLine("Math not found");
+            // }
+
+
+            //* Exercise Odd/Even number split *//
+
+            /* 
+            Create 2 lists with int data type, one for even, one for odd
+            - Loop from 0-20
+                - If number is even, add to even list
+                - If number is odd, add to odd list
+            - Print even list
+            - Print odd list
+            */
+
+            List<int> odd = new List<int>();
+            List<int> even = new List<int>();
+
+            for (int i = 0; i <= 20; i++)
             {
-                Console.WriteLine(teachers);
-            }
-            else
-            {
-                Console.WriteLine("Math teacher not found");
+                if (i % 2 == 0)
+                {
+                    even.Add(i);
+                }
+                else
+                {
+                    odd.Add(i);
+                }
             }
 
-            if (teachers.ContainsKey("Math"))
+            Console.WriteLine("Printing even numbers:");
+
+            foreach (var item in even)
             {
-                teachers.Remove("Math");
-            }
-            else
-            {
-                Console.WriteLine("Math not found");
+                Console.Write($"{item} ");
             }
 
+            Console.WriteLine(Environment.NewLine + "Printing odd numbers:");
+
+            foreach (var item in odd)
+            {
+                Console.Write($"{item} ");
+            }
+
+            Console.ReadLine();
 
         }
     }
