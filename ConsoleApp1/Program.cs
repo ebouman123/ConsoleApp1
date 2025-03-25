@@ -548,36 +548,63 @@ namespace ConsoleApp1
             - Print odd list
             */
 
-            List<int> odd = new List<int>();
-            List<int> even = new List<int>();
+            // List<int> odd = new List<int>();
+            // List<int> even = new List<int>();
 
-            for (int i = 0; i <= 20; i++)
+            // for (int i = 0; i <= 20; i++)
+            // {
+            //     if (i % 2 == 0)
+            //     {
+            //         even.Add(i);
+            //     }
+            //     else
+            //     {
+            //         odd.Add(i);
+            //     }
+            // }
+
+            // Console.WriteLine("Printing even numbers:");
+
+            // foreach (var item in even)
+            // {
+            //     Console.Write($"{item} ");
+            // }
+
+            // Console.WriteLine(Environment.NewLine + "Printing odd numbers:");
+
+            // foreach (var item in odd)
+            // {
+            //     Console.Write($"{item} ");
+            // }
+
+            // Console.ReadLine();
+
+            //* Array of Multiples *//
+
+            /*
+                Define and initialize two ints (num, length)
+                e.g. (7, 5) -> (7, 14, 21, 28, 35)
+                Create int array with size length
+                loop through and insert the value into the array
+                print the final array
+            */
+
+            int num = 7;
+            int length = 5;
+
+            int[] result = new int[length];
+
+            int counter = 0;
+
+            for (int i = 1; i < result.Length; i++, counter++)
             {
-                if (i % 2 == 0)
-                {
-                    even.Add(i);
-                }
-                else
-                {
-                    odd.Add(i);
-                }
+                result[counter]= num * i;
             }
 
-            Console.WriteLine("Printing even numbers:");
-
-            foreach (var item in even)
+            foreach (var item in result)
             {
-                Console.Write($"{item} ");
+                Console.WriteLine(item);
             }
-
-            Console.WriteLine(Environment.NewLine + "Printing odd numbers:");
-
-            foreach (var item in odd)
-            {
-                Console.Write($"{item} ");
-            }
-
-            Console.ReadLine();
 
         }
     }
