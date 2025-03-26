@@ -589,23 +589,39 @@ namespace ConsoleApp1
                 print the final array
             */
 
-            int num = 7;
-            int length = 5;
+            // int num = 7;
+            // int length = 5;
 
-            int[] result = new int[length];
+            // int[] result = new int[length];
 
-            int counter = 0;
+            // int counter = 0;
 
-            for (int i = 1; i < result.Length; i++, counter++)
-            {
-                result[counter]= num * i;
-            }
+            // for (int i = 1; i < result.Length; i++, counter++)
+            // {
+            //     result[counter]= num * i;
+            // }
 
-            foreach (var item in result)
-            {
-                Console.WriteLine(item);
-            }
+            // foreach (var item in result)
+            // {
+            //     Console.WriteLine(item);
+            // }
 
+            //* Functions *//
+            // must start with static void Main(string[], args){}
+            // static means you can use it without creating a new instance of the function
+            // public means everything has access to the function
+            // non-static you would have to reference the class e.g. - Test test = new Test(); -> test.something();
+            // with static you can just reference the class e.g. - Test.something();
+            // void means function returns nothing
+
+            WelcomeMessage();
+
+
+        }
+
+        static void WelcomeMessage()
+        {
+            Console.WriteLine("Welcome, Gordon!");
         }
     }
 }
