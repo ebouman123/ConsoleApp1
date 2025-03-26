@@ -614,24 +614,73 @@ namespace ConsoleApp1
             // with static you can just reference the class e.g. - Test.something();
             // void means function returns nothing
 
-            WelcomeMessage();
-            CreateAndPrintArray(); // note that the numbers array wouldn't be available here since it is out of scope and not returned
+            // WelcomeMessage();
+            // CreateAndPrintArray(); // note that the numbers array wouldn't be available here since it is out of scope and not returned
 
-        }
+            //* Return type functions *//
 
-        static void WelcomeMessage()
-        {
-            Console.WriteLine("Welcome, Gordon!");
-        }
+            Console.Title = ReturnName();
+            PrintIntroduction();
 
-        static void CreateAndPrintArray() 
-        {
-            int[] numbers = new int[3] {0, 1, 2};
+            // As usual, keep things DRY and make sure functions have 1 purpose
+
+            int[] numbers = new int[3];
+            
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                numbers[i] = ReadNumberFromConsole();
+            }
 
             foreach (var item in numbers)
             {
                 Console.Write($"{item} ");
             }
+
+            int[] newNumbers = CreateRandomArray();
+
+            Console.WriteLine();
+
+            foreach (var item in newNumbers)
+            {
+                Console.Write($"{item} ");
+            }
+
         }
+
+        static int[] CreateRandomArray()
+        {
+            return new int[3] {0, 1, 2};
+        }
+
+        static string ReturnName()
+        {
+            return "Gordon";
+        }
+
+        static void PrintIntroduction()
+        {
+            Console.WriteLine($"Hello, my name is {ReturnName()}");
+        }
+
+        static int ReadNumberFromConsole()
+        {
+            Console.Write("Enter a number: ");
+            return Convert.ToInt32(Console.ReadLine());
+        }
+
+        // static void WelcomeMessage()
+        // {
+        //     Console.WriteLine("Welcome, Gordon!");
+        // }
+
+        // static void CreateAndPrintArray() 
+        // {
+        //     int[] numbers = new int[3] {0, 1, 2};
+
+        //     foreach (var item in numbers)
+        //     {
+        //         Console.Write($"{item} ");
+        //     }
+        // }
     }
 }
