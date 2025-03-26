@@ -615,13 +615,23 @@ namespace ConsoleApp1
             // void means function returns nothing
 
             WelcomeMessage();
-
+            CreateAndPrintArray(); // note that the numbers array wouldn't be available here since it is out of scope and not returned
 
         }
 
         static void WelcomeMessage()
         {
             Console.WriteLine("Welcome, Gordon!");
+        }
+
+        static void CreateAndPrintArray() 
+        {
+            int[] numbers = new int[3] {0, 1, 2};
+
+            foreach (var item in numbers)
+            {
+                Console.Write($"{item} ");
+            }
         }
     }
 }
