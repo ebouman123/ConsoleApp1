@@ -1,6 +1,7 @@
 ﻿using System.Threading;
 using System;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 
 namespace ConsoleApp1
 {
@@ -647,24 +648,35 @@ namespace ConsoleApp1
 
             //* Function Parameters *//
 
-            Console.WriteLine(Add(50, 50));
+            // Console.WriteLine(Add(50, 50));
 
-            int firstNum = ReadInt("Enter first number: ");
-            int secondNum = ReadInt("Enter second number: ");
+            // int firstNum = ReadInt("Enter first number: ");
+            // int secondNum = ReadInt("Enter second number: ");
 
-            Console.WriteLine(Add(firstNum, secondNum));
+            // Console.WriteLine(Add(firstNum, secondNum));
+
+
+            //* Optional Parameters *//
+
+            int result = Add(5);
+            Console.WriteLine(result);
 
         }
 
-        static int ReadInt(string message)
-        {
-            Console.Write($"{message}");
-            return Convert.ToInt32(Console.ReadLine());
-        }
-        static int Add(int a, int b)
+        static int Add(int a, [Optional] int b) // uses the default value if a parameter isn't entered, can also use int b = default
         {
             return a + b;
         }
+
+        // static int ReadInt(string message)
+        // {
+        //     Console.Write($"{message}");
+        //     return Convert.ToInt32(Console.ReadLine());
+        // }
+        // static int Add(int a, int b)
+        // {
+        //     return a + b;
+        // }
 
         // static int[] CreateRandomArray()
         // {
