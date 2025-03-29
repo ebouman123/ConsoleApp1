@@ -619,54 +619,73 @@ namespace ConsoleApp1
 
             //* Return type functions *//
 
-            Console.Title = ReturnName();
-            PrintIntroduction();
+            // Console.Title = ReturnName();
+            // PrintIntroduction();
 
-            // As usual, keep things DRY and make sure functions have 1 purpose
+            // // As usual, keep things DRY and make sure functions have 1 purpose
 
-            int[] numbers = new int[3];
+            // int[] numbers = new int[3];
             
-            for (int i = 0; i < numbers.Length; i++)
-            {
-                numbers[i] = ReadNumberFromConsole();
-            }
+            // for (int i = 0; i < numbers.Length; i++)
+            // {
+            //     numbers[i] = ReadNumberFromConsole();
+            // }
 
-            foreach (var item in numbers)
-            {
-                Console.Write($"{item} ");
-            }
+            // foreach (var item in numbers)
+            // {
+            //     Console.Write($"{item} ");
+            // }
 
-            int[] newNumbers = CreateRandomArray();
+            // int[] newNumbers = CreateRandomArray();
 
-            Console.WriteLine();
+            // Console.WriteLine();
 
-            foreach (var item in newNumbers)
-            {
-                Console.Write($"{item} ");
-            }
+            // foreach (var item in newNumbers)
+            // {
+            //     Console.Write($"{item} ");
+            // }
+
+            //* Function Parameters *//
+
+            Console.WriteLine(Add(50, 50));
+
+            int firstNum = ReadInt("Enter first number: ");
+            int secondNum = ReadInt("Enter second number: ");
+
+            Console.WriteLine(Add(firstNum, secondNum));
 
         }
 
-        static int[] CreateRandomArray()
+        static int ReadInt(string message)
         {
-            return new int[3] {0, 1, 2};
-        }
-
-        static string ReturnName()
-        {
-            return "Gordon";
-        }
-
-        static void PrintIntroduction()
-        {
-            Console.WriteLine($"Hello, my name is {ReturnName()}");
-        }
-
-        static int ReadNumberFromConsole()
-        {
-            Console.Write("Enter a number: ");
+            Console.Write($"{message}");
             return Convert.ToInt32(Console.ReadLine());
         }
+        static int Add(int a, int b)
+        {
+            return a + b;
+        }
+
+        // static int[] CreateRandomArray()
+        // {
+        //     return new int[3] {0, 1, 2};
+        // }
+
+        // static string ReturnName()
+        // {
+        //     return "Gordon";
+        // }
+
+        // static void PrintIntroduction()
+        // {
+        //     Console.WriteLine($"Hello, my name is {ReturnName()}");
+        // }
+
+        // static int ReadNumberFromConsole()
+        // {
+        //     Console.Write("Enter a number: ");
+        //     return Convert.ToInt32(Console.ReadLine());
+        // }
 
         // static void WelcomeMessage()
         // {
