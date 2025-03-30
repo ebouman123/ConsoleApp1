@@ -658,15 +658,33 @@ namespace ConsoleApp1
 
             //* Optional Parameters *//
 
-            int result = Add(5);
-            Console.WriteLine(result);
+            // int result = Add(5);
+            // Console.WriteLine(result);
+
+            //* Named Parameters *//
+
+            string nameInput = "Gordon";
+            int ageInput = 8;
+            string colorInput = "White & Gray";
+
+            // named parameters, can switch the order of the parameters
+            PrintDetails(age: ageInput,
+                         name: nameInput,
+                         color: colorInput);
 
         }
 
-        static int Add(int a, [Optional] int b) // uses the default value if a parameter isn't entered, can also use int b = default
+        static void PrintDetails(string name, int age, string color)
         {
-            return a + b;
+            Console.WriteLine($"Name: {name}");
+            Console.WriteLine($"Age: {age}");
+            Console.WriteLine($"Color: {color}");
         }
+
+        // static int Add(int a, [Optional] int b) // uses the default value if a parameter isn't entered, can also use int b = default
+        // {
+        //     return a + b;
+        // }
 
         // static int ReadInt(string message)
         // {
