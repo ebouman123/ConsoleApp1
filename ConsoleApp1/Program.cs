@@ -663,23 +663,60 @@ namespace ConsoleApp1
 
             //* Named Parameters *//
 
-            string nameInput = "Gordon";
-            int ageInput = 8;
-            string colorInput = "White & Gray";
+            // string nameInput = "Gordon";
+            // int ageInput = 8;
+            // string colorInput = "White & Gray";
 
-            // named parameters, can switch the order of the parameters
-            PrintDetails(age: ageInput,
-                         name: nameInput,
-                         color: colorInput);
+            // // named parameters, can switch the order of the parameters
+            // PrintDetails(age: ageInput,
+            //              name: nameInput,
+            //              color: colorInput);
+
+            //* Out Parameters *//
+
+            List<string> shoppingList = new List<string>
+            {
+                "Coffee", "Milk"
+            };
+
+            Console.WriteLine(shoppingList.IndexOf("Coffee"));
+            // Console.WriteLine(FoundInList("Coffee", shoppingList, out int index));
+
+            if (FoundInList("Coffee", shoppingList, out int index))
+            {
+                Console.WriteLine($"Found Coffee at index {index}");
+            }
+            else
+            {
+                Console.WriteLine("Coffee not found");
+            }
+
+
+            // Console.WriteLine(found ? "Found" : "Not Found");
 
         }
 
-        static void PrintDetails(string name, int age, string color)
+        static bool FoundInList(string s, List<string> list, out int index)
         {
-            Console.WriteLine($"Name: {name}");
-            Console.WriteLine($"Age: {age}");
-            Console.WriteLine($"Color: {color}");
+            index = -1;
+
+            for (int i = 0; i < list.Count; i++)
+            {
+                if (list[i].ToLower().Equals(s.ToLower()))
+                {
+                    index = i;
+                }
+            }
+
+            return index > -1;
         }
+
+        // static void PrintDetails(string name, int age, string color)
+        // {
+        //     Console.WriteLine($"Name: {name}");
+        //     Console.WriteLine($"Age: {age}");
+        //     Console.WriteLine($"Color: {color}");
+        // }
 
         // static int Add(int a, [Optional] int b) // uses the default value if a parameter isn't entered, can also use int b = default
         // {
