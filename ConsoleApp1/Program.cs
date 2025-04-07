@@ -674,42 +674,67 @@ namespace ConsoleApp1
 
             //* Out Parameters *//
 
-            List<string> shoppingList = new List<string>
-            {
-                "Coffee", "Milk"
-            };
+            // List<string> shoppingList = new List<string>
+            // {
+            //     "Coffee", "Milk"
+            // };
 
-            Console.WriteLine(shoppingList.IndexOf("Coffee"));
-            // Console.WriteLine(FoundInList("Coffee", shoppingList, out int index));
+            // Console.WriteLine(shoppingList.IndexOf("Coffee"));
+            // // Console.WriteLine(FoundInList("Coffee", shoppingList, out int index));
 
-            if (FoundInList("Coffee", shoppingList, out int index))
-            {
-                Console.WriteLine($"Found Coffee at index {index}");
-            }
-            else
-            {
-                Console.WriteLine("Coffee not found");
-            }
+            // if (FoundInList("Coffee", shoppingList, out int index))
+            // {
+            //     Console.WriteLine($"Found Coffee at index {index}");
+            // }
+            // else
+            // {
+            //     Console.WriteLine("Coffee not found");
+            // }
 
 
             // Console.WriteLine(found ? "Found" : "Not Found");
 
+            //* Reference Parameters *//
+            // different from out, this actually references the "num"
+            // does not have to assign anything like out does
+
+            int num = 10;
+            string name = "";
+            Assign(ref num, ref name);
+            Console.WriteLine($"{num}, {name}");
+
+            Console.WriteLine("Enter a new name: ");
+            string newName = Console.ReadLine();
+            ChangeName(ref name, newName);
+            Console.WriteLine(name);
+
         }
 
-        static bool FoundInList(string s, List<string> list, out int index)
+
+        static void ChangeName(ref string name, string newName)
         {
-            index = -1;
-
-            for (int i = 0; i < list.Count; i++)
-            {
-                if (list[i].ToLower().Equals(s.ToLower()))
-                {
-                    index = i;
-                }
-            }
-
-            return index > -1;
+            name = newName;
         }
+        static void Assign(ref int num, ref string name)
+        {
+            num = 20;
+            name = "Gordon";
+        }
+
+        // static bool FoundInList(string s, List<string> list, out int index)
+        // {
+        //     index = -1;
+
+        //     for (int i = 0; i < list.Count; i++)
+        //     {
+        //         if (list[i].ToLower().Equals(s.ToLower()))
+        //         {
+        //             index = i;
+        //         }
+        //     }
+
+        //     return index > -1;
+        // }
 
         // static void PrintDetails(string name, int age, string color)
         // {
